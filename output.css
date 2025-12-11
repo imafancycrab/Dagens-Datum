@@ -10,6 +10,7 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-violet-500: oklch(60.6% 0.25 292.717);
     --color-purple-300: oklch(82.7% 0.119 306.383);
     --color-purple-400: oklch(71.4% 0.203 305.504);
     --color-pink-300: oklch(82.3% 0.12 346.018);
@@ -520,6 +521,9 @@
   .text-pink-500 {
     color: var(--color-pink-500);
   }
+  .text-violet-500 {
+    color: var(--color-violet-500);
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -531,6 +535,9 @@
   }
   .opacity-80 {
     opacity: 80%;
+  }
+  .opacity-90 {
+    opacity: 90%;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
