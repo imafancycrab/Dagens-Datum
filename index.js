@@ -30,24 +30,24 @@ async function GetInformationAboutDay(){
     }
 }
 
-function checkTime(i) {
-    if (i < 10) { i = "0" + i; }
-    return i;
-}
+// function checkTime(i) {
+//     if (i < 10) { i = "0" + i; }
+//     return i;
+// }
 
-function StartTime() {
-    const t = new Date();
-    let h = t.getHours();
-    let m = t.getMinutes();
-    let s = t.getSeconds();
+// function StartTime() {
+//     const t = new Date();
+//     let h = t.getHours();
+//     let m = t.getMinutes();
+//     let s = t.getSeconds();
 
-    m = checkTime(m);
-    s = checkTime(s);
+//     m = checkTime(m);
+//     s = checkTime(s);
 
-    HTML.time.textContent = h + ":" + m + ":" + s;
+//     HTML.time.textContent = h + ":" + m + ":" + s;
 
-    setTimeout(StartTime, 1000);
-}
+//     setTimeout(StartTime, 1000);
+// }
 
 async function LoadValues() {
     const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
