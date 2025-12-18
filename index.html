@@ -7,49 +7,39 @@
     <title>Dagens Datum</title>
     <link rel="stylesheet" href="output.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
-
-<link rel="icon" href="favicon.png" type="image/x-icon">
- </head>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <!-- font och bakgrund -->
   <body class="font-[Nunito] h-screen bg-linear-to-r from-pink-300 via-purple-300 to-indigo-400">
-<main class="flex items-center justify-center h-full">
-
-    <div class="flex flex-col items-center justify-center space-y-8">
-
+    <!-- de föremålen som ska visas -->
+    <main class="flex items-center justify-center h-full">
+      <div class="flex flex-col items-center justify-center space-y-8">
         <div class="relative flex items-center justify-center">
+          <div class="relative z-10 bg-white grid grid-cols-2 w-100 h-90 rounded-4xl drop-shadow-2xl">
+            <div class="absolute top-0 w-full flex justify-around px-8 -mt-6 z-20">
 
-            <div class="relative z-10 bg-white grid grid-cols-2 w-100 h-90 rounded-4xl drop-shadow-2xl">
-
-                <div class="absolute top-0 w-full flex justify-around px-8 -mt-6 z-20">
-                    
-                    <div class="flex flex-col items-center">
-                        <div class="w-5 h-7 bg-gray-400 rounded-full translate-y-2"></div>
-                        <div class="w-5 h-5 bg-gray-200 rounded-full -mt-2 translate-y-1"></div>
-                    </div>
-
-                    <div class="flex flex-col items-center">
-                        <div class="w-5 h-7 bg-gray-400 rounded-full translate-y-2"></div>
-                        <div class="w-5 h-5 bg-gray-200 rounded-full -mt-2 translate-y-1"></div>
-                    </div>
-
-                </div>
-
-                <div class="absolute inset-x-0 top-0 h-10 bg-red-500 opacity-80 rounded-t-4xl"></div>
-                <div class="flex justify-center col-span-2 text-4xl font-semibold pt-15 pb-3 text-pink-500" id="Month"></div>
-                <div class="flex justify-center col-span-2 text-8xl mb-15 pt-5 font-black" id="Date"></div>
-                <div class="flex justify-center text-xl text-center font-semibold mb-1 text-violet-500 opacity-80" id="Weekday"></div>
-                <div class="flex justify-center text-xl font-semibold text-blue-500 opacity-75" id="Year"></div>
-                <div class="col-span-2 flex justify-center items-center text-2xl text-center font-semibold text-emerald-500 opacity-75 -translate-y-20" id="Namnsdag"></div>
-
-
+                <!-- sidans binder -->
+              <div class="flex flex-col items-center">
+                <div class="w-5 h-7 bg-gray-400 rounded-full translate-y-2"></div>
+                <div class="w-5 h-5 bg-gray-200 rounded-full -mt-2 translate-y-1"></div>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-5 h-7 bg-gray-400 rounded-full translate-y-2"></div>
+                <div class="w-5 h-5 bg-gray-200 rounded-full -mt-2 translate-y-1"></div>
+              </div>
             </div>
-
+            <!-- de objekt i sidan som visar information -->
+            <div class="absolute inset-x-0 top-0 h-10 bg-red-500 opacity-80 rounded-t-4xl"></div>
+            <div class="flex justify-center col-span-2 text-4xl font-semibold pt-15 pb-3 text-pink-500" id="Month"></div>
+            <div class="flex justify-center col-span-2 text-8xl mb-15 pt-5 font-black" id="Date"></div>
+            <div class="flex justify-center text-xl text-center font-semibold mb-1 text-violet-500 opacity-80" id="Weekday"></div>
+            <div class="flex justify-center text-xl font-semibold text-blue-500 opacity-75" id="Year"></div>
+            <div class="col-span-2 flex justify-center items-center text-2xl text-center font-semibold text-emerald-500 opacity-75 -translate-y-20" id="Namnsdag"></div>
+          </div>
         </div>
-    </div>
-
-    <div class="absolute w-[480px] h-[430px] bg-gray-300 opacity-70 rounded-[3rem] shadow-2xl z-0" id="graysquare"></div>
-
-</main>
+      </div>
+      <div class="absolute w-[480px] h-[430px] bg-gray-300 opacity-70 rounded-[3rem] shadow-2xl z-0" id="graysquare"></div>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
-

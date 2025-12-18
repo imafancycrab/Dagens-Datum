@@ -1,3 +1,4 @@
+// Variabler
 const HTML = {};
 HTML.month = document.getElementById("Month");
 HTML.date = document.getElementById("Date");
@@ -6,6 +7,7 @@ HTML.weekday = document.getElementById("Weekday")
 HTML.time = document.getElementById("Time")
 HTML.namnsdag = document.getElementById("Namnsdag")
 
+// få tiden
 let d = new Date();
 const date = {};
 date.day = d.getDay()
@@ -13,6 +15,7 @@ date.date = d.getDate()
 date.month = d.getMonth()
 date.year = d.getFullYear()
 
+// få information om dagen med API, (röd dag och namnsdag)
 async function GetInformationAboutDay(){
     const url = "https://corsproxy.io/?url=https://sholiday.faboul.se/dagar/v2.1/" + date.year + "/" + (date.month + 1) + "/" + date.date;
     try {
@@ -49,6 +52,7 @@ async function GetInformationAboutDay(){
 //     setTimeout(StartTime, 1000);
 // }
 
+// ladda in värdena i sidan
 async function LoadValues() {
     const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
     const Days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
@@ -57,10 +61,11 @@ async function LoadValues() {
     HTML.year.textContent = date.year;
     HTML.weekday.textContent = Days[date.day];
 
-    result = await GetInformationAboutDay();
+    result = await GetInformationAboutDay(); // får information om dagen
 
-    HTML.namnsdag.textContent = result.dagar[0].namnsdag.join(", ");
+    HTML.namnsdag.textContent = result.dagar[0].namnsdag.join(", "); // om det är 2 namn separera med ,
 
+    // om det är en röd dag gör bakgrunden röd
     if(result.dagar[0]["röd dag"] === "Ja"){
     document.getElementById("graysquare").classList.add('bg-red-500');
     document.getElementById("graysquare").classList.remove("bg-gray-300")
